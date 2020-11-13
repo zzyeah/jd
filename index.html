@@ -1,61 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-    <link rel="stylesheet" href="./swiper/index.css">
-    <style>
-        .wrapper {
-            width: 500px;
-            height: 400px;
-            border: 1px solid #000;
-            margin: 0 auto;
-        }
-
-        .item {
-            width: 500px;
-            height: 400px;
-        }
-
-        .item1 {
-            background-color: aqua;
-        }
-
-        .item2 {
-            background-color: salmon;
-        }
-
-        .item3 {
-            background-color: seagreen;
-        }
-    </style>
+    <title>京东首屏</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="item item1">item1</div>
-        <div class="item item2">item2</div>
-        <div class="item item3">item3</div>
+    <!-- 四个区域 -->
+    <div id="shortcut">
+        <div class="w">顶部导航</div>
+    </div>
+
+
+    <div id="header">
+        <div class="w">搜索框区域</div>
+    </div>
+
+
+    <div id="fs">
+        <div class="w">轮播图区域</div>
+    </div>
+
+
+    <div id="J_seckill">
+        <div class="w">秒杀</div>
     </div>
 
     <script src="./js/jquery-3.4.1.js"></script>
-    <script src="./swiper/index.js"></script>
-    <script>                            
-        $('.wrapper').swiper({
-            content: $('.item'),
-            width: 500,
-            height: 400,
-            type: 'animate',
-            isAuto: true,
-            showSpots: true,
-            showChangeBtn: 'always',
-            autoChangeTime: 3000,
-            spotsPosition: 'center'
-        })
-    </script>
+    <script src="./js/index.js"></script>
 </body>
-
 </html>

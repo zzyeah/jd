@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#shortcut {
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+}
+#header {
+    height: 140px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+#fs {
+    height: 480px;
+    background-color: aquamarine;
+}
+
+#J_seckill {
+    height: 260px;
+    background-color: brown;
+}
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}

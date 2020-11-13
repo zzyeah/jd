@@ -20,8 +20,8 @@
 .my-swiper.my-swiper-fade {
 
 }
-.my-swiper.my-swiper-animate {
-
+.my-swiper.my-swiper-animate .my-swiper-content {
+    position: absolute;
 }
 .my-swiper.my-swiper-fade .my-swiper-content {
     position: absolute;
