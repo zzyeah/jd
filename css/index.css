@@ -2,7 +2,29 @@
     padding: 0;
     margin: 0;
 }
+@font-face {
+    font-family: 'iconfont';  /* project id 2194820 */
+    src: url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.eot');
+    src: url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.woff2') format('woff2'),
+    url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family: 'iconfont';
+    font-style: normal;
+}
 
+a{
+    color: #666;
+}
+
+body{
+    background-color: #f4f4f4;
+    font-size: 12px;
+    color: #666;
+}
 #shortcut {
     height: 30px;
     border-bottom: 1px solid #ddd;
@@ -15,7 +37,6 @@
 }
 #fs {
     height: 480px;
-    background-color: aquamarine;
 }
 
 #J_seckill {

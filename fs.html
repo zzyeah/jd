@@ -1,7 +1,128 @@
 <link rel="stylesheet" href="./css/fs.css">
 <div>
-    <div class="fs1">fs1</div>
+    <div class="fs1">
+        <ul id="menu">
+            <li>
+                <a href="#">家用电器</a>
+            </li>
+            <li>
+                <a href="#">手机</a>
+                <a href="#">运营商</a>
+                <a href="#">数码</a>
+            </li>
+        </ul>
+        <div id="menu-content">
+            <!-- <div class="tabs">
+                <a href="#" class="tabs-item">家电11.11
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+                <a href="#" class="tabs-item">家电11.11
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+                <a href="#" class="tabs-item">家电11.11
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+                <a href="#" class="tabs-item">家电11.11
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+                <a href="#" class="tabs-item">家电11.11
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+            </div>
+            <div class="subs">
+                <dl class="clearfix">
+                    <dt>
+                        <a href="#">电视
+                            <i class="iconfont">&#xe625;</i>
+                        </a>
+                    </dt>
+                    <dd>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">全面屏电视</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="ads">广告</div> -->
+        </div>
+    </div>
     <div class="fs2">fs2</div>
     <div class="fs3">fs3</div>
     <div class="fs4">fs4</div>
 </div>
+<script>
+    var menuData = [];
+
+    $.ajax({
+        url: "/menu",
+        dataType: "json",
+        success: function (response) {
+            renderMenu(response.dataSource);
+            menuData = response.dataSource;
+        }
+    });
+
+    $('#menu').on('mouseenter', 'li', function () {
+        $('#menu-content').show();
+        var index = $(this).index();
+        // console.log(menuData[index]);
+        renderMenuContent(menuData[index].content);
+    })
+    function renderMenu(data) {
+        var menuStr = '';
+        data.forEach(function (item, index) {
+            // ['<a></a>', '<a></a>']
+            menuStr += `<li>${item.titles.map(function (title) {
+                return `<a href="${title.href}">${title.name}</a>`
+            }).join('/')}</li>`
+        });
+        $('#menu').html(menuStr)
+    }
+
+    function renderMenuContent(data) {
+        var tabs = $('<div class="tabs"></div>');
+        var subs = $('<div class="subs"></div>');
+        data.tabs.forEach(function (tab) {
+            $(`<a href="{tab.href}" class="tabs-item">${tab.name}
+                    <i class="iconfont">&#xe625;</i>
+                </a>`).appendTo(tabs);
+        });
+        console.log(data.subs);
+        
+        data.subs.forEach(function (sub) {
+            var oDl = $('<dl class="clearfix"></dl>');
+            $(` <dt>
+                <a href="${sub.href}">${sub.category}
+                    <i class="iconfont">&#xe625;</i>
+                </a>
+            </dt>`).appendTo(oDl);
+            var oDD = $('<dd></dd>');
+            sub.items.forEach(function (item) {
+                oDD.append($(`<a href="${item.href}">${item.name}</a>`))
+            });
+            oDl.append(oDD).appendTo(subs);
+        });
+        $('#menu-content').empty().append(tabs).append(subs);
+    }
+</script>
