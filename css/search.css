@@ -35,7 +35,7 @@
 
 .search-form #search-btn {
     width: 58px;
-    height: 32px;
+    height: 33px;
     line-height: 32px;
     border: none;
     background-color: #e1251b;
@@ -43,11 +43,13 @@
     font-weight: 700;
     color: #fff;
     vertical-align: top;
+    position: absolute;
+    top: -1px;
 }
 .photo-search-btn {
     position: absolute;
     right: 75px;
-    top: 7px;
+    top: 5px;
     width: 19px;
     height: 15px;
     font-size: 20px;

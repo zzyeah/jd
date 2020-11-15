@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 @font-face {
     font-family: 'iconfont';  /* project id 2194820 */
     src: url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.eot');
@@ -11,16 +12,15 @@
     url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.ttf') format('truetype'),
     url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.svg#iconfont') format('svg');
   }
-.iconfont{
+
+.iconfont {
     font-family: 'iconfont';
     font-style: normal;
 }
-
-a{
+a {
     color: #666;
 }
-
-body{
+body {
     background-color: #f4f4f4;
     font-size: 12px;
     color: #666;
@@ -41,10 +41,11 @@ body{
 
 #J_seckill {
     height: 260px;
-    background-color: brown;
+    margin-top: 30px;
 }
 .w {
     width: 1190px;
     margin: 0 auto;
     position: relative;
+    height: 100%;
 }
