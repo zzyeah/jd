@@ -10,7 +10,7 @@
     url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.woff') format('woff'),
     url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.ttf') format('truetype'),
     url('http://at.alicdn.com/t/font_2194820_vyvd94xbub.svg#iconfont') format('svg');
-}
+  }
 .iconfont{
     font-family: 'iconfont';
     font-style: normal;
@@ -46,4 +46,5 @@ body{
 .w {
     width: 1190px;
     margin: 0 auto;
+    position: relative;
 }

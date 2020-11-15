@@ -11,7 +11,7 @@ Mock.mock('/menu', {
                 href: '@url'
             }],
             'subs|8-15': [{
-                'activity|1': ['','每300减40','199减100'],
+                'activity|1': ['', '每300减40', '199减100'],
                 category: '@cword(2,3)',
                 href: '@url',
                 'items|8-20': [{
@@ -21,4 +21,15 @@ Mock.mock('/menu', {
             }]
         }
     }]
+});
+
+Mock.mock('/hotwords', {
+    'result|8-15': [{
+        word: '@cword(2,5)',
+        href: '@url(http)'
+    }]
+})
+
+Mock.mock('/recommendWords', {
+    text: '@cword(2,5)'
 })
